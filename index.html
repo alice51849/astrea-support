@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Astrea — Offline Astrology, Tarot & Divination for iPhone</title>
+  <meta name="description" content="Astrea is a premium fully-offline iOS astrology and divination app with Tarot, natal astrology, Zi Wei Dou Shu, BaZi, daily fortune, and compatibility insights." />
+  <meta name="theme-color" content="#0A0620" />
+  <style>
+    :root{--bg:#0a0620;--bg2:#19103a;--bg3:#34185b;--gold:#e8c36b;--gold2:#fff0b8;--ink:#fff8df;--muted:#d8cce8;--glass:rgba(255,255,255,.085);--line:rgba(232,195,107,.28);--shadow:0 28px 80px rgba(0,0,0,.42)}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;line-height:1.7;background:radial-gradient(circle at 18% 8%,rgba(232,195,107,.20),transparent 24rem),radial-gradient(circle at 82% 14%,rgba(148,83,255,.22),transparent 26rem),linear-gradient(135deg,var(--bg),var(--bg2) 48%,var(--bg3));min-height:100vh;overflow-x:hidden}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;background-image:radial-gradient(#fff8 1px,transparent 1px),radial-gradient(#e8c36b88 1px,transparent 1px);background-size:72px 72px,131px 131px;background-position:0 0,28px 46px;opacity:.28;mask-image:linear-gradient(#000,transparent 92%)}
+    body:after{content:"";position:fixed;inset:-20%;pointer-events:none;background:conic-gradient(from 180deg at 50% 50%,transparent,rgba(232,195,107,.08),transparent,rgba(122,83,255,.10),transparent);filter:blur(55px);animation:aura 18s linear infinite;opacity:.7}@keyframes aura{to{transform:rotate(1turn)}}
+    a{color:var(--gold2);text-decoration:none} a:hover{text-decoration:underline}.wrap{width:min(1120px,calc(100% - 32px));margin:auto;position:relative;z-index:1}.nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0}.brand{font-family:Georgia,"Times New Roman",serif;color:var(--gold);letter-spacing:.22em;text-transform:uppercase;font-weight:700}.navlinks{display:flex;gap:18px;font-size:14px;color:var(--muted)}
+    .hero{padding:78px 0 58px;text-align:center}.eyebrow{color:var(--gold2);letter-spacing:.24em;text-transform:uppercase;font-size:12px;font-weight:700}.hero h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(58px,12vw,132px);line-height:.9;margin:18px 0 16px;color:var(--gold);text-shadow:0 0 32px rgba(232,195,107,.22);letter-spacing:.045em}.tagline{font-family:Georgia,"Times New Roman",serif;font-size:clamp(24px,4vw,44px);margin:0 auto 18px;max-width:850px}.lead{max-width:790px;margin:0 auto 30px;color:var(--muted);font-size:18px}.cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}.button{border:1px solid var(--line);border-radius:999px;padding:13px 20px;background:linear-gradient(135deg,rgba(232,195,107,.24),rgba(255,255,255,.08));box-shadow:0 14px 38px rgba(0,0,0,.26);font-weight:700}.button.secondary{background:rgba(255,255,255,.06)}
+    .badges,.grid{display:grid;gap:16px}.badges{grid-template-columns:repeat(3,1fr);margin:28px 0 24px}.grid{grid-template-columns:repeat(3,1fr)}.card{border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.055));backdrop-filter:blur(18px);border-radius:28px;padding:24px;box-shadow:var(--shadow)}.badge{padding:18px;text-align:center}.badge strong{display:block;color:var(--gold2);font-family:Georgia,"Times New Roman",serif;font-size:20px}.badge span,.card p,.faq p{color:var(--muted)}
+    section{padding:40px 0}.section-title{text-align:center;font-family:Georgia,"Times New Roman",serif;color:var(--gold);font-size:clamp(32px,5vw,54px);line-height:1.05;margin:0 0 22px}.card h3{font-family:Georgia,"Times New Roman",serif;color:var(--gold2);font-size:24px;margin:0 0 8px}.card p{margin:0}.wide{grid-column:span 2}.faq{max-width:880px;margin:auto}.faq details{border:1px solid var(--line);border-radius:22px;background:rgba(255,255,255,.07);padding:18px 20px;margin:12px 0}.faq summary{cursor:pointer;color:var(--gold2);font-weight:700}.contact{text-align:center;max-width:780px;margin:auto}.contact a.email{display:inline-block;margin-top:14px;font-family:Georgia,"Times New Roman",serif;font-size:clamp(24px,5vw,38px);color:var(--gold)}
+    footer{padding:42px 0 54px;text-align:center;color:#c8bdda;font-size:14px}.footerlinks{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin-bottom:12px}.fine{font-size:13px;color:#b8abc9;max-width:860px;margin:18px auto 0}.orb{width:220px;height:220px;border:1px solid rgba(232,195,107,.42);border-radius:50%;margin:0 auto 28px;position:relative;box-shadow:inset 0 0 70px rgba(232,195,107,.12),0 0 90px rgba(117,78,255,.22)}.orb:before,.orb:after{content:"✦";position:absolute;color:var(--gold);font-size:34px;left:50%;top:50%;transform:translate(-50%,-50%)}.orb:after{content:"";inset:28px;border:1px solid rgba(232,195,107,.22);border-radius:50%;transform:none;left:28px;top:28px}
+    @media (max-width:760px){.nav{align-items:flex-start}.navlinks{gap:10px;flex-wrap:wrap;justify-content:flex-end}.badges,.grid{grid-template-columns:1fr}.wide{grid-column:auto}.hero{padding-top:44px}.card{border-radius:22px;padding:20px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav class="nav" aria-label="Primary navigation">
+      <div class="brand">Astrea</div>
+      <div class="navlinks"><a href="#features">Features</a><a href="#faq">FAQ</a><a href="#support">Support</a><a href="privacy.html">Privacy</a></div>
+    </nav>
+    <main>
+      <section class="hero">
+        <div class="orb" aria-hidden="true"></div>
+        <div class="eyebrow">Private cosmic intelligence for iPhone</div>
+        <h1>Astrea</h1>
+        <p class="tagline">A premium offline sanctuary for astrology, Tarot, and Eastern divination.</p>
+        <p class="lead">Explore Rider–Waite Tarot, Western natal astrology, Zi Wei Dou Shu, BaZi, daily fortune, and compatibility insights — all calculated privately on your device.</p>
+        <div class="cta"><a class="button" href="#support">Get support</a><a class="button secondary" href="privacy.html">Read privacy policy</a></div>
+      </section>
+
+      <section aria-label="Trust badges" class="badges">
+        <div class="card badge"><strong>100% Offline</strong><span>No account, login, servers, ads, analytics, or tracking.</span></div>
+        <div class="card badge"><strong>US$5.99 Lifetime</strong><span>One-time purchase. No subscription. No recurring fees.</span></div>
+        <div class="card badge"><strong>On-Device Only</strong><span>Birth details, readings, and calculations never leave your iPhone.</span></div>
+      </section>
+
+      <section id="features">
+        <h2 class="section-title">A celestial suite, crafted for reflection.</h2>
+        <div class="grid">
+          <div class="card"><h3>Tarot</h3><p>Rider–Waite 78-card spreads for intuitive daily guidance and deeper self-inquiry.</p></div>
+          <div class="card"><h3>Western Astrology</h3><p>Natal planets, houses, aspects, and the Big Three presented with elegant clarity.</p></div>
+          <div class="card"><h3>Zi Wei Dou Shu</h3><p>紫微斗數 insights blending classical Eastern symbolism with a modern mobile experience.</p></div>
+          <div class="card"><h3>BaZi / Four Pillars</h3><p>八字 analysis for elemental patterns, cycles, and contemplative life themes.</p></div>
+          <div class="card"><h3>Daily Fortune</h3><p>Daily cosmic prompts designed for mindfulness, planning, and personal reflection.</p></div>
+          <div class="card"><h3>Compatibility</h3><p>Synastry and 合盤 perspectives for relationship dynamics and shared patterns.</p></div>
+        </div>
+      </section>
+
+      <section id="faq">
+        <h2 class="section-title">FAQ</h2>
+        <div class="faq">
+          <details open><summary>Does Astrea collect personal data?</summary><p>No. Astrea is fully offline and does not collect, transmit, sell, or share personal data. There is no account system, tracking, ads, or analytics.</p></details>
+          <details><summary>Do readings require the internet?</summary><p>No. Astrea performs calculations locally on your device. Internet access is not required for the app’s core features.</p></details>
+          <details><summary>Is Astrea a subscription?</summary><p>No. Astrea uses a one-time purchase for lifetime unlock, currently US$5.99. Purchases are processed securely by Apple.</p></details>
+          <details><summary>What is Astrea for?</summary><p>Astrea is intended for entertainment, self-reflection, and personal insight. It is not medical, legal, financial, psychological, or professional advice.</p></details>
+        </div>
+      </section>
+
+      <section id="support" class="card contact">
+        <div class="eyebrow">Support</div>
+        <h2 class="section-title">We’re here to help.</h2>
+        <p>For questions, purchase support, bug reports, or feedback about Astrea, email us and include your device model, iOS version, and a brief description of the issue.</p>
+        <a class="email" href="mailto:hourstag.app@gmail.com">hourstag.app@gmail.com</a>
+      </section>
+    </main>
+    <footer>
+      <div class="footerlinks"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a><a href="mailto:hourstag.app@gmail.com">Contact</a></div>
+      <div>© 2026 Cait518 · Astrea · Bundle ID: com.alice51849.Astrea</div>
+      <p class="fine">Astrea is designed for entertainment and self-reflection purposes only. It does not provide professional advice or guaranteed predictions.</p>
+    </footer>
+  </div>
+</body>
+</html>
