@@ -9,9 +9,9 @@ import sys
 
 ROOT = Path(__file__).resolve().parent
 PAGES = {
-    "index.html": "https://alice51849.github.io/astrea-support/",
-    "privacy.html": "https://alice51849.github.io/astrea-support/privacy.html",
-    "terms.html": "https://alice51849.github.io/astrea-support/terms.html",
+    "index.html": "https://open.cait518.cc/astrea-support/",
+    "privacy.html": "https://open.cait518.cc/astrea-support/privacy.html",
+    "terms.html": "https://open.cait518.cc/astrea-support/terms.html",
 }
 ALLOWED_EMAIL = "hourstag.app@gmail.com"
 EMAIL_RE = re.compile(r"[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}")
